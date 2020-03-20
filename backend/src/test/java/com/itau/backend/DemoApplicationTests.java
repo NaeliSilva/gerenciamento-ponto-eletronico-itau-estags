@@ -1,10 +1,10 @@
-package com.itau.gerenciamentopontoeletronicoitauestags;
+package com.itau.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class GerenciamentoPontoEletronicoItauEstagsApplicationTests {
+class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {

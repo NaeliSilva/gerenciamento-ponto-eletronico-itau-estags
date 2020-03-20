@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-GerenciamentoPontoEletronicoItauEstagsApplication<gerenciamento-ponto-eletronico-itau-estags>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.itau.gerenciamentopontoeletronicoitauestags.GerenciamentoPontoEletronicoItauEstagsApplication",
+            "projectName": "gerenciamento-ponto-eletronico-itau-estags",
+            "args": ""
+        }
+    ]
+}
