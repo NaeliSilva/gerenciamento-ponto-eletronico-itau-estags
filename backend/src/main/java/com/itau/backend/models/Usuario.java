@@ -25,6 +25,17 @@ public class Usuario implements Serializable {
     @CreationTimestamp
     private LocalDateTime data_cadastro;
 
+    public Usuario() {
+    }
+
+    public Usuario(long id, @NotNull String nome, @NotNull String cpf, @NotNull String email, LocalDateTime data_cadastro, LocalDateTime data_update_cadastro) {
+        this.id = id;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.email = email;
+        this.data_cadastro = data_cadastro;
+    }
+
     public long getId() { return id; }
 
     public void setId(long id) { this.id = id; }
