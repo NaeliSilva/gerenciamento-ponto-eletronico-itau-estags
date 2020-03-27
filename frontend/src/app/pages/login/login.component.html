@@ -25,11 +25,11 @@
             <div class="form-group mb-3">
               <div class="input-group input-group-alternative">
 
-                <input class="form-control" placeholder="Funcional" type="text">
+                <input class="form-control" placeholder="Funcional" type="text" [(ngModel)]="data.usuarioId" name="usuarioId">
               </div>
             </div>
             <div class="form-group">
-              <select class="custom-select">
+              <select class="custom-select" [(ngModel)]="data.tipo" name="tipo">
                 <option selected>Tipo</option>
                 <option value="entrada">Entrada</option>
                 <option value="saida">Saída</option>
@@ -37,7 +37,7 @@
             </div>
 
             <div class="text-center">
-              <button type="button" class="btn btn-primary my-4">Salvar</button>
+              <button type="button" class="btn btn-primary my-4" (click)="submit()">Salvar</button>
             </div>
           </form>
         </div>
