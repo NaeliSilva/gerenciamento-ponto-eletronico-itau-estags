@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<router-outlet></router-outlet>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<router-outlet></router-outlet>\n<ngx-spinner   template=\"<img src='./assets/img/brand/itau.png' height='50' width='50'/>\"></ngx-spinner>\n");
 
 /***/ }),
 
@@ -88,10 +88,12 @@ __webpack_require__.r(__webpack_exports__);
 var map = {
 	"./layouts/admin-layout/admin-layout.module": [
 		"./src/app/layouts/admin-layout/admin-layout.module.ts",
+		"common",
 		"layouts-admin-layout-admin-layout-module"
 	],
 	"./layouts/auth-layout/auth-layout.module": [
 		"./src/app/layouts/auth-layout/auth-layout.module.ts",
+		"common",
 		"layouts-auth-layout-auth-layout-module"
 	]
 };
@@ -105,7 +107,7 @@ function webpackAsyncContext(req) {
 	}
 
 	var ids = map[req], id = ids[0];
-	return __webpack_require__.e(ids[1]).then(function() {
+	return Promise.all(ids.slice(1).map(__webpack_require__.e)).then(function() {
 		return __webpack_require__(id);
 	});
 }
@@ -190,6 +192,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm5/ng-bootstrap.js");
 /* harmony import */ var _app_routing__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.routing */ "./src/app/app.routing.ts");
 /* harmony import */ var _components_components_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/components.module */ "./src/app/components/components.module.ts");
+/* harmony import */ var ngx_spinner__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ngx-spinner */ "./node_modules/ngx-spinner/__ivy_ngcc__/fesm5/ngx-spinner.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -199,6 +202,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 var __importDefault = (undefined && undefined.__importDefault) || function (mod) {
   return (mod && mod.__esModule) ? mod : { "default": mod };
 };
+
 
 
 
@@ -222,7 +226,8 @@ var AppModule = /** @class */ (function () {
                 _components_components_module__WEBPACK_IMPORTED_MODULE_10__["ComponentsModule"],
                 _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"],
-                _app_routing__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"]
+                _app_routing__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"],
+                ngx_spinner__WEBPACK_IMPORTED_MODULE_11__["NgxSpinnerModule"]
             ],
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
@@ -819,7 +824,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/naeli/Área de Trabalho/Projetos/gerenciamento-ponto-eletronico-itau-estags/frontend/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/velrino/Desktop/naelinda/gerenciamento-ponto-eletronico-itau-estags/frontend/src/main.ts */"./src/main.ts");
 
 
 /***/ })
