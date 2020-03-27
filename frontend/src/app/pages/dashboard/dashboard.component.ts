@@ -1,13 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Chart from 'chart.js';
-
-// core components
-import {
-  chartOptions,
-  parseOptions,
-  chartExample1,
-  chartExample2
-} from "../../variables/charts";
+import { RequestService } from 'src/app/services/request';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,9 +7,17 @@ import {
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  constructor() { }
+  constructor(private requestService: RequestService) { }
+
+  data: any;
 
   ngOnInit() {
+    this.getData();
+  }
+
+  async getData(){
+    const response = await this.requestService.send('usuario');
+    this.data = response.result;
   }
 
 }

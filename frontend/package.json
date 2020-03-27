@@ -28,6 +28,7 @@
     "clipboard": "2.0.4",
     "core-js": "3.6.4",
     "ngx-clipboard": "13.0.0",
+    "ngx-spinner": "^9.0.1",
     "ngx-toastr": "12.0.0",
     "nouislider": "13.1.1",
     "rxjs": "6.5.4",

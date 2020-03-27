@@ -99,11 +99,11 @@
         <div class="card-header border-0">
           <div class="row align-items-center">
             <div class="col">
-              <h3 class="mb-0">Page visits</h3>
+              <h3 class="mb-0">Usuários</h3>
             </div>
-            <div class="col text-right">
-              <a href="#!" class="btn btn-sm btn-primary">See all</a>
-            </div>
+            <!-- <div class="col text-right">
+              <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse">
+            </div> -->
           </div>
         </div>
         <div class="table-responsive">
@@ -118,18 +118,19 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr *ngFor="let item of data">
                 <th scope="row">
-                  /argon/profile.html
+                  {{item.nome}}
                 </th>
                 <td>
-                  1,795
+                  {{item.email}}
                 </td>
                 <td>
-                  190
+                  {{item.cpf}}
                 </td>
                 <td>
-                  <i class="fas fa-arrow-down text-danger mr-3"></i> 46,53%
+                  <button type="button" class="btn btn-primary btn-sm" [routerLink]="['/usuario', item.id]"><i class="fas fa-eye text-white"></i></button>
+                  <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-trash text-white"></i></button>
                 </td>
               </tr>
             </tbody>
