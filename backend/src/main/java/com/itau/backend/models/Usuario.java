@@ -40,6 +40,8 @@ public class Usuario implements Serializable {
 
     public void setId(long id) { this.id = id; }
 
+    public void getNome(String nome) { this.nome = nome; }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
